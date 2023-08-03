@@ -27,3 +27,28 @@ Note:
 The spacecraft’s initial direction (N, S, E, W, Up, Down) represents the reference frame for movement and rotation.
 The spacecraft cannot move or rotate diagonally; it can only move in the direction it is currently facing.
 Assume that the spacecraft’s movement and rotations are rigid, and it cannot move beyond the galactic boundaries.
+
+
+Example
+Given the starting point (0, 0, 0) following (x, y, z) and initial direction N, the following commands should result in the indicated final position and direction:
+
+Commands: [“f”, “r”, “u”, “b”, “l”]
+
+Starting Position: (0, 0, 0)
+
+Initial Direction: N
+
+“f” - (0, 1, 0) - N
+“r” - (0, 1, 0) - E
+“u” - (0, 1, 0) - U
+“b” - (0, 1, -1) - U
+“l” - (0, 1, -1) - W
+Final Position: (0, 1, -1)
+
+Final Direction: W
+
+Your task is to design the program that enables Chandrayaan 3 to execute these commands accurately and efficiently in the vast expanse of the galaxy:
+
+Make sure to take an incremental approach and show it in the commits
+Keep your code clean, readable, and modularized
+Do not throw exceptions/handle cases for invalid arguments
