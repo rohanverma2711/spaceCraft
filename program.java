@@ -74,6 +74,14 @@ class SpaceCraft {
             case 'W':
                 facing = 'S';
                 break;
+
+            case  'U':
+                facing='W';
+                 break;
+            case 'D':
+                facing ='E';
+                break;
+
            
         }
     }
@@ -92,6 +100,14 @@ class SpaceCraft {
             case 'W':
                 facing = 'N';
                 break;
+            case  'U':
+                 facing='E';
+                 break;
+            case 'D':
+                facing ='W';
+                break;
+
+
                
         }
     }
