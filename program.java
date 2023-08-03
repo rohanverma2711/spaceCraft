@@ -2,12 +2,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 class SpaceCraft {
-    private double x;
-    private double y;
-    private double z;
+    private int x;
+    private int y;
+    private int z;
     private char facing;
 
-    public SpaceCraft(double x, double y, double z, char facing) {
+    public SpaceCraft(int x, int y, int z, char facing) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -151,14 +151,19 @@ class SpaceCraft {
 
     public void getStatus() {
         System.out.println("Current Position: x=" + x + ", y=" + y + ", z=" + z + ", Facing=" + facing);
+      
+    }
+     public void FinalStatus() {
+        System.out.println();
+        System.out.println("Final Position: x=" + x + ", y=" + y + ", z=" + z + "\nFinal Direction = " + facing);
     }
 }
 
 public class program {
     public static void main(String[] args) {
-        double initial_x = 0;
-        double initial_y = 0;
-        double initial_z = 0;
+        int initial_x = 0;
+        int initial_y = 0;
+        int initial_z = 0;
         char initial_facing = 'N';
         Scanner sc = new Scanner(System.in);
 
@@ -168,10 +173,11 @@ public class program {
         char arr[] = inputCommand.toCharArray();
         for( int i =0;i<arr.length;i++)
         {
-             spacecraft.executeCommands(arr[i]);
+        spacecraft.executeCommands(arr[i]);
         spacecraft.getStatus();
 
         }
+        spacecraft.FinalStatus();
 
        
     }
