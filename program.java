@@ -164,8 +164,8 @@ public class program {
 
         SpaceCraft spacecraft = new SpaceCraft(initial_x, initial_y, initial_z, initial_facing);
 
-        String commands = "frubl";
-        char arr[] = commands.toCharArray();
+        String inputCommand= sc.next();
+        char arr[] = inputCommand.toCharArray();
         for( int i =0;i<arr.length;i++)
         {
              spacecraft.executeCommands(arr[i]);
